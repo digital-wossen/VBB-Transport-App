@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import SearchBar from "./components/SearchBar";
@@ -26,7 +25,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter basename="https://henokhm.github.io/vbb-transport-deploy/">
       <div className="App">
         <Switch>
             <Route exact path="/">
@@ -42,7 +41,7 @@ function App() {
             </Route>
           </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
